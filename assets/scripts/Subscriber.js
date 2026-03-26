@@ -1,7 +1,7 @@
 class Subscriber extends User {
-    #pages;
-    #groups;
-    #canMonetize;
+    #pages = [];
+    #groups = [];
+    #canMonetize = true;
 
     constructor(id, name, userName, email, pages, groups, canMonetize){
         super(id, name, userName, email);
