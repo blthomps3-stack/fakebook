@@ -1,6 +1,14 @@
 @charset "utf-8";
 @import "./reset.css";
 
+:root {
+    --app-bg-color: rgb(37, 37, 39);
+    --app-secondary-color: rgb(57, 57, 61);
+    --app-blue: rgb(0, 102, 255);
+    --primary-text-color: rgb(255, 255, 255);
+    --secondary-text-color: rgb(168, 159, 159);
+}
+
 .container {
     width: min(100% - 30px, 1080px);
     margin-inline: auto;
@@ -8,6 +16,7 @@
 
 main {
     padding: 60px 0;
+    background-color: var(--app-bg-color);
 }
 
 .flex {
@@ -21,15 +30,15 @@ main {
 
 /* header */
 #logo {
-    color: rgb(0, 102, 255);
+    color: var(--app-blue);
 }
 
 .page-header {
     justify-content: space-around;
-    background-color: rgb(57, 57, 61);
+    background-color: var(--app-secondary-color);
     height: 80px;
     line-height: 80px;
-    color: #fff;
+    color: var(--primary-text-color);
 }
 
 nav ul {
@@ -41,7 +50,7 @@ nav ul {
 .postbox {
     width: 600px;
     height: 200px;
-    background-color: rgb(57, 57, 61);
+    background-color: var(--app-secondary-color);
     padding: 15px;
     border-radius: 5px;
 }
@@ -56,8 +65,8 @@ textarea {
     font-weight: 700;
     resize: none;
     width: 570px;
-    color:rgb(168, 159, 159);
-    background-color: rgb(57, 57, 61);
+    color: var(--secondary-text-color);
+    background-color: var(--app-secondary-color);
 }
 
 .postbuttons {
@@ -65,15 +74,15 @@ textarea {
     align-items: center;
     i {
         font-size: 25px;
-        color: #fff;
+        color: var(--primary-text-color);
     }
     input {
-        color: #fff;
+        color: var(--primary-text-color);
     }
     button {
-        background-color:blue;
+        background-color: var(--app-blue);
         border-radius: 5px;
-        color: #fff;
+        color: var(--primary-text-color);
         padding: 10px 20px;
         font-weight: 700;
     }
