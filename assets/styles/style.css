@@ -5,8 +5,8 @@
     --app-bg-color: rgb(37, 37, 39);
     --app-secondary-color: rgb(57, 57, 61);
     --app-blue: rgb(0, 102, 255);
-    --primary-text-color: rgb(255, 255, 255);
-    --secondary-text-color: rgb(168, 159, 159);
+    --app-white: rgb(255, 255, 255);
+    --app-light-grey-text: rgb(168, 159, 159);
 }
 
 .container {
@@ -15,7 +15,6 @@
 }
 
 main {
-    padding: 60px 0;
     background-color: var(--app-bg-color);
 }
 
@@ -38,7 +37,7 @@ main {
     background-color: var(--app-secondary-color);
     height: 80px;
     line-height: 80px;
-    color: var(--primary-text-color);
+    color: var(--app-white);
 }
 
 nav ul {
@@ -46,12 +45,13 @@ nav ul {
     gap: 10px;
 }
 
-/* main */
+/* postbox */
 .postbox {
     width: 600px;
     height: 200px;
     background-color: var(--app-secondary-color);
     padding: 15px;
+    margin: 60px;
     border-radius: 5px;
 }
 
@@ -65,7 +65,7 @@ textarea {
     font-weight: 700;
     resize: none;
     width: 570px;
-    color: var(--secondary-text-color);
+    color: var(--app-light-grey-text);
     background-color: var(--app-secondary-color);
 }
 
@@ -74,22 +74,42 @@ textarea {
     align-items: center;
     i {
         font-size: 25px;
-        color: var(--primary-text-color);
+        color: var(--app-white);
     }
     input {
-        color: var(--primary-text-color);
+        color: var(--app-white);
     }
     button {
         background-color: var(--app-blue);
         border-radius: 5px;
-        color: var(--primary-text-color);
+        color: var(--app-white);
         padding: 10px 20px;
         font-weight: 700;
     }
 }
 
-
 ::file-selector-button {
     display: none;
 }
 
+/* posts */
+
+.post {
+    background-color: var(--app-white);
+    width: 600px;
+    border-radius: 5px;
+    flex-direction: column;
+    padding: 20px;
+    header {
+        justify-content: space-between;
+        .date {
+            color: var(--app-light-grey-text);
+        }
+    }
+    .caption {
+        padding: 10px 0px;
+    }
+    img {
+        border-radius: 10px;
+    }
+}
