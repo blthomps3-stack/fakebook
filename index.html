@@ -10,12 +10,13 @@
         <title>Introduction to Web Development</title>
         <link rel="stylesheet" href="./assets/styles/style.css" media="all">
         <script src="./assets/scripts/app.js" defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
-        <header>
-            <h1>Fakebook</h1>
+        <header class="flex page-header">
+            <h1 id="logo">Fakebook</h1>
             <nav>
-                <ul>
+                <ul class="flex">
                     <li>Friends</li>
                     <li>Pages</li>
                     <li>Games</li>
@@ -23,8 +24,32 @@
                     <li>Settings</li>
                 </ul>
             </nav>
-            <img>
+            <img alt = "user profile picture">
         </header>
-        <div></div>
+        <main class="center">
+            <div class="postbox">
+                <form id="postform" class="flex">
+                    <textarea placeholder="What's new?"></textarea>
+                    <div class="flex postbuttons">
+                        <div>
+                            <label for="upload"><i class="fa-solid fa-image"></i></label>
+                            <input type="file" accept="image" id="upload">
+                        </div>
+                        <button type="submit">Post</button>
+                    </div>
+                </form>
+            </div>
+            <section>
+                <div class="post"> <!-- example post -->
+                    <header>
+                        <img>
+                        <h4 class="username">userName</h4>
+                        <h4 class="date">date</h4>
+                    </header>
+                    <p class="caption"></p> <!-- only if post has caption -->
+                    <img> <!-- only if post has image -->
+                </div>
+            </section>
+        </main>
     </body>
 </html>

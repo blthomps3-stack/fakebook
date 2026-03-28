@@ -1,6 +1,14 @@
 @charset "utf-8";
 @import "./reset.css";
 
+:root {
+    --app-bg-color: rgb(37, 37, 39);
+    --app-secondary-color: rgb(57, 57, 61);
+    --app-blue: rgb(0, 102, 255);
+    --primary-text-color: rgb(255, 255, 255);
+    --secondary-text-color: rgb(168, 159, 159);
+}
+
 .container {
     width: min(100% - 30px, 1080px);
     margin-inline: auto;
@@ -8,4 +16,80 @@
 
 main {
     padding: 60px 0;
+    background-color: var(--app-bg-color);
 }
+
+.flex {
+    display: flex;
+}
+
+.center {
+    display: grid;
+    justify-items: center;
+}
+
+/* header */
+#logo {
+    color: var(--app-blue);
+}
+
+.page-header {
+    justify-content: space-around;
+    background-color: var(--app-secondary-color);
+    height: 80px;
+    line-height: 80px;
+    color: var(--primary-text-color);
+}
+
+nav ul {
+    list-style: none;
+    gap: 10px;
+}
+
+/* main */
+.postbox {
+    width: 600px;
+    height: 200px;
+    background-color: var(--app-secondary-color);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#postform {
+    height: 170px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+textarea {
+    font-weight: 700;
+    resize: none;
+    width: 570px;
+    color: var(--secondary-text-color);
+    background-color: var(--app-secondary-color);
+}
+
+.postbuttons {
+    justify-content: space-between;
+    align-items: center;
+    i {
+        font-size: 25px;
+        color: var(--primary-text-color);
+    }
+    input {
+        color: var(--primary-text-color);
+    }
+    button {
+        background-color: var(--app-blue);
+        border-radius: 5px;
+        color: var(--primary-text-color);
+        padding: 10px 20px;
+        font-weight: 700;
+    }
+}
+
+
+::file-selector-button {
+    display: none;
+}
+
