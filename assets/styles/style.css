@@ -44,7 +44,6 @@ nav ul {
     background-color: rgb(57, 57, 61);
     padding: 15px;
     border-radius: 5px;
-    font-weight: 700;
 }
 
 #postform {
@@ -54,6 +53,7 @@ nav ul {
 }
 
 textarea {
+    font-weight: 700;
     resize: none;
     width: 570px;
     color:rgb(168, 159, 159);
@@ -62,4 +62,25 @@ textarea {
 
 .postbuttons {
     justify-content: space-between;
+    align-items: center;
+    i {
+        font-size: 25px;
+        color: #fff;
+    }
+    input {
+        color: #fff;
+    }
+    button {
+        background-color:blue;
+        border-radius: 5px;
+        color: #fff;
+        padding: 10px 20px;
+        font-weight: 700;
+    }
 }
+
+
+::file-selector-button {
+    display: none;
+}
+

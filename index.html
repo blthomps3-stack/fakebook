@@ -10,6 +10,7 @@
         <title>Introduction to Web Development</title>
         <link rel="stylesheet" href="./assets/styles/style.css" media="all">
         <script src="./assets/scripts/app.js" defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
         <header class="flex page-header">
@@ -30,7 +31,10 @@
                 <form id="postform" class="flex">
                     <textarea placeholder="What's new?"></textarea>
                     <div class="flex postbuttons">
-                        <input type="file" accept="image">
+                        <div>
+                            <label for="upload"><i class="fa-solid fa-image"></i></label>
+                            <input type="file" accept="image" id="upload">
+                        </div>
                         <button type="submit">Post</button>
                     </div>
                 </form>
