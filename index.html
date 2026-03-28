@@ -12,10 +12,10 @@
         <script src="./assets/scripts/app.js" defer></script>
     </head>
     <body>
-        <header>
-            <h1>Fakebook</h1>
+        <header class="flex page-header">
+            <h1 id="logo">Fakebook</h1>
             <nav>
-                <ul>
+                <ul class="flex">
                     <li>Friends</li>
                     <li>Pages</li>
                     <li>Games</li>
@@ -23,15 +23,16 @@
                     <li>Settings</li>
                 </ul>
             </nav>
-            <img>
-            
+            <img alt = "user profile picture">
         </header>
-        <main>
-            <div id="postbox">
-                <form>
-                    <textarea>What's new?</textarea>
-                    <input type="file" accept="image">
-                    <button type="submit">Post</button>
+        <main class="center">
+            <div class="postbox">
+                <form id="postform" class="flex">
+                    <textarea placeholder="What's new?"></textarea>
+                    <div class="flex postbuttons">
+                        <input type="file" accept="image">
+                        <button type="submit">Post</button>
+                    </div>
                 </form>
             </div>
             <section>
