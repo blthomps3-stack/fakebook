@@ -28,12 +28,12 @@
         </header>
         <main class="center">
             <div class="postbox">
-                <form id="postform" class="flex">
-                    <textarea placeholder="What's new?"></textarea>
+                <form id="postform" class="flex" method="get">
+                    <textarea placeholder="What's new?" name="posttext" id="textbox"></textarea>
                     <div class="flex postbuttons">
                         <div>
                             <label for="upload"><i class="fa-solid fa-image"></i></label>
-                            <input type="file" accept="image" id="upload">
+                            <input type="file" accept="image" id="upload" name="postimage">
                         </div>
                         <button type="submit">Post</button>
                     </div>
