@@ -29,18 +29,18 @@
         <main class="center">
             <div class="postbox">
                 <form id="postform" class="flex">
-                    <textarea placeholder="What's new?"></textarea>
+                    <textarea placeholder="What's new?" name="posttext" id="textbox"></textarea>
                     <div class="flex postbuttons">
                         <div>
                             <label for="upload"><i class="fa-solid fa-image"></i></label>
-                            <input type="file" accept="image" id="upload">
+                            <input type="file" accept="image" id="upload" name="postimage">
                         </div>
-                        <button type="submit">Post</button>
+                        <div id="submit">Post</div>
                     </div>
                 </form>
             </div>
             <section id="timeline">
-                <div class="flex post"> <!-- example post -->
+                <div class="flex post" id="basePost"> <!-- example post -->
                     <header class="flex">
                         <div>
                             <img>
@@ -48,8 +48,6 @@
                         </div>
                         <h4 class="date">date</h4>
                     </header>
-                    <p class="caption">Hello World!</p> <!-- only if post has caption -->
-                    <img src="./assets/media/Bliss_(Windows_XP).png"> <!-- only if post has image -->
                 </div>
             </section>
         </main>

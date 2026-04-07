@@ -79,7 +79,7 @@ textarea {
     input {
         color: var(--app-white);
     }
-    button {
+    #submit {
         background-color: var(--app-blue);
         border-radius: 5px;
         color: var(--app-white);
@@ -93,6 +93,9 @@ textarea {
 }
 
 /* posts */
+#basePost {
+    visibility: hidden;
+}
 
 .post {
     background-color: var(--app-white);
