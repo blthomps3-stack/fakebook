@@ -1,14 +1,60 @@
 'use strict';
-
 const postForm = document.getElementById('postform');
 const upload = document.getElementById('upload');
 const textbox = document.getElementById('textbox');
 const submit = document.getElementById('submit');
-
 const postTemplate = document.getElementById('basePost');
-
 const timeline = document.getElementById('timeline');
-const test = document.getElementById('logo');
+
+class User {
+    #id;
+    #name;
+    #userName;
+    #email;
+
+    constructor(id, name, userName, email){
+        this.#id = id;
+        this.#name = name;
+        this.#userName = userName;
+        this.#email = email;
+    }
+
+    get id() {return this.#id;}
+    get name() {return this.#name;}
+    get userName() {return this.#userName;}
+    get email() {return this.#email;}
+
+    getInfo() {
+
+    }
+}
+
+class Subscriber extends User {
+    #pages = [];
+    #groups = [];
+    #canMonetize = true;
+
+    constructor(id, name, userName, email, pages, groups, canMonetize){
+        super(id, name, userName, email);
+        this.#pages = pages;
+        this.#groups = groups;
+        this.#canMonetize = canMonetize;
+    }
+
+    get pages() {return this.#pages;}
+    get groups() {return this.#groups;}
+    get canMonetize() {return this.#canMonetize;}
+}
+
+const subscriber = new Subscriber(
+    '1000', 
+    'Firstname Lastname', 
+    'User Name', 
+    'user@email.com',
+    ['page1', 'page2'],
+    ['group1', 'group2'],
+    true,
+);
 
 function createPost(){
     let post = postTemplate.cloneNode(true);
@@ -38,10 +84,6 @@ function createPost(){
         post.removeChild;
     }
 }
-
-test.addEventListener('click', function() {
-    createPost();
-});
 
 submit.addEventListener('click', function(){
     createPost();
