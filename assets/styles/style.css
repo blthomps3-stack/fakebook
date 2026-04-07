@@ -93,6 +93,9 @@ textarea {
 }
 
 /* posts */
+#basePost {
+    visibility: hidden;
+}
 
 .post {
     background-color: var(--app-white);

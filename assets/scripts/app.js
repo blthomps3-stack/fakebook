@@ -30,6 +30,7 @@ function createPost(){
     }
     console.log(post);
     if(valid) {
+        post.setAttribute('id', '');
         timeline.prepend(post);
         postForm.reset();
     } else {
