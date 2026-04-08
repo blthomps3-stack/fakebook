@@ -51,6 +51,26 @@ nav ul {
     border-radius: 50%;
 }
 
+/* infobox */
+#infobox {
+    position: absolute;
+    background-color: var(--app-secondary-color);
+    width: 200px;
+    top: 90px;
+    right: 300px;
+    line-height: 30px;
+    padding: 10px;
+    justify-content: space-between;
+}
+#moneyicon {
+    color: green;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    font-size: 30px;
+    align-self: end;
+}
+
 /* postbox */
 .postbox {
     width: 600px;

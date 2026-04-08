@@ -1,4 +1,6 @@
 'use strict';
+const infobox = document.getElementById('infobox');
+
 const postForm = document.getElementById('postform');
 const upload = document.getElementById('upload');
 const textbox = document.getElementById('textbox');
@@ -25,7 +27,7 @@ class User {
     get email() {return this.#email;}
 
     getInfo() {
-
+        return([this.id, this.name, this.userName, this.email]);
     }
 }
 
@@ -44,6 +46,10 @@ class Subscriber extends User {
     get pages() {return this.#pages;}
     get groups() {return this.#groups;}
     get canMonetize() {return this.#canMonetize;}
+
+    getInfo() {
+        return([this.id, this.name, this.userName, this.email, this.pages, this.groups, this.canMonetize]);
+    }
 }
 
 const subscriber = new Subscriber(
