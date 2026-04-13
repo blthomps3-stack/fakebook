@@ -1,5 +1,12 @@
 'use strict';
+const usericon = document.getElementById('usericon');
 const infobox = document.getElementById('infobox');
+const fullname = document.getElementById('name');
+const username = document.getElementById('username');
+const email = document.getElementById('email');
+const pages = document.getElementById('pages');
+const groups = document.getElementById('groups');
+const moenyicon = document.getElementById('moneyicon');
 
 const postForm = document.getElementById('postform');
 const upload = document.getElementById('upload');
@@ -53,14 +60,28 @@ class Subscriber extends User {
 }
 
 const subscriber = new Subscriber(
-    '1000', 
-    'Firstname Lastname', 
-    'User Name', 
-    'user@email.com',
+    '1072', 
+    'John Smith', 
+    'jsmith', 
+    'jsmith@email.com',
     ['page1', 'page2'],
-    ['group1', 'group2'],
+    ['smithing', 'johnning'],
     true,
 );
+
+function writeModal(info){
+    fullname.innerText = info[0];
+    username.innerText = `${info[1]}#${info[2]}`;
+    email.innerText = info[3];
+    pages.innerText = `Pages: ${info[4]}`;
+    groups.innerText = `Groups: ${info[5]}`;
+    moneyicon.style.color = info[6] ? 'green' : 'red';
+}
+
+usericon.addEventListener('click', function(){
+    writeModal(subscriber.getInfo());
+    infobox.showModal();
+});
 
 function createPost(){
     let post = postTemplate.cloneNode(true);

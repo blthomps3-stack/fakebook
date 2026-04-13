@@ -53,11 +53,10 @@ nav ul {
 
 /* infobox */
 #infobox {
-    position: absolute;
     background-color: var(--app-secondary-color);
     width: 200px;
     top: 90px;
-    right: 300px;
+    left: 300px;
     line-height: 30px;
     padding: 10px;
     justify-content: space-between;

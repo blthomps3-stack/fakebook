@@ -24,18 +24,18 @@
                     <li>Settings</li>
                 </ul>
             </nav>
-            <img class="pfp" alt="user profile picture" src="./assets/media/favicon.png">
-            <div id="infobox" class="flex">
-                <div>
-                    <h4 id="name">name</h4>
-                    <h5 id="username">userName.id</h5>
-                    <h5 id="email">email</h5>
-                    <p id="pages">pages:</p>
-                    <p id="groups">groups:</p>
-                </div>
-                <i class="fa-solid fa-comment-dollar" id="moneyicon"></i> <!-- Turns red if user is demonetized -->
-            </div>
+            <img class="pfp" alt="user profile picture" src="./assets/media/favicon.png" id="usericon">
         </header>
+        <dialog id="infobox" class="flex" closedby="any">
+            <div>
+                <h4 id="name">name</h4>
+                <h5 id="username">userName.id</h5>
+                <h5 id="email">email</h5>
+                <p id="pages">pages:</p>
+                <p id="groups">groups:</p>
+            </div>
+            <i class="fa-solid fa-comment-dollar" id="moneyicon"></i> <!-- Turns red if user is demonetized -->
+        </dialog>
         <main class="center">
             <div class="postbox">
                 <form id="postform" class="flex">
