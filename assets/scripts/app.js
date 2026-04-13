@@ -70,8 +70,8 @@ const subscriber = new Subscriber(
 );
 
 function writeModal(info){
-    fullname.innerText = info[0];
-    username.innerText = `${info[1]}#${info[2]}`;
+    fullname.innerText = info[1];
+    username.innerText = `${info[2]}#${info[0]}`;
     email.innerText = info[3];
     pages.innerText = `Pages: ${info[4]}`;
     groups.innerText = `Groups: ${info[5]}`;

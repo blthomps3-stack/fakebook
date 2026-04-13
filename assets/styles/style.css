@@ -53,21 +53,23 @@ nav ul {
 
 /* infobox */
 #infobox {
+    justify-self: end;
     background-color: var(--app-secondary-color);
-    width: 200px;
+    width: 300px;
     top: 90px;
-    left: 300px;
+    right: 70px;
     line-height: 30px;
     padding: 10px;
     justify-content: space-between;
 }
+
 #moneyicon {
     color: green;
+    margin-top: 10px;
     height: 30px;
     width: 30px;
     line-height: 30px;
     font-size: 30px;
-    align-self: end;
 }
 
 /* postbox */
