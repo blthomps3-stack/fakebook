@@ -34,7 +34,7 @@ class User {
     get email() {return this.#email;}
 
     getInfo() {
-        return([this.id, this.name, this.userName, this.email]);
+        return([this.name, this.userName, this.id, this.email]);
     }
 }
 
@@ -55,7 +55,7 @@ class Subscriber extends User {
     get canMonetize() {return this.#canMonetize;}
 
     getInfo() {
-        return([this.id, this.name, this.userName, this.email, this.pages, this.groups, this.canMonetize]);
+        return([this.name, this.userName, this.id, this.email, this.pages, this.groups, this.canMonetize]);
     }
 }
 
@@ -70,12 +70,18 @@ const subscriber = new Subscriber(
 );
 
 function writeModal(info){
-    fullname.innerText = info[1];
-    username.innerText = `${info[2]}#${info[0]}`;
+    fullname.innerText = info[0];
+    username.innerText = `${info[1]}#${info[2]}`;
     email.innerText = info[3];
-    pages.innerText = `Pages: ${info[4]}`;
-    groups.innerText = `Groups: ${info[5]}`;
-    moneyicon.style.color = info[6] ? 'green' : 'red';
+    if(info.length > 4){ /* In this program there's only a subscriber but this if statement makes it compatible with users too */
+        pages.innerText = `Pages: ${info[4]}`;
+        groups.innerText = `Groups: ${info[5]}`;
+        moneyicon.style.color = info[6] ? 'green' : 'red';
+    } else {
+        pages.innerText = '';
+        groups.innerText = '';
+        moneyicon.style.color = 'grey';
+    }
 }
 
 usericon.addEventListener('click', function(){
