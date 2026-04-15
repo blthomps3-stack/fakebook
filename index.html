@@ -24,8 +24,18 @@
                     <li>Settings</li>
                 </ul>
             </nav>
-            <img alt = "user profile picture">
+            <img class="pfp" alt="user profile picture" src="./assets/media/favicon.png" id="usericon">
         </header>
+        <dialog id="infobox" closedby="any">
+            <div>
+                <h4 id="name">name</h4>
+                <h5 id="username">userName.id</h5>
+                <h5 id="email">email</h5>
+                <p id="pages">pages:</p>
+                <p id="groups">groups:</p>
+            </div>
+            <i class="fa-solid fa-comment-dollar" id="moneyicon"></i> <!-- Turns red if user is demonetized -->
+        </dialog>
         <main class="center">
             <div class="postbox">
                 <form id="postform" class="flex">
@@ -42,8 +52,8 @@
             <section id="timeline">
                 <div class="flex post" id="basePost"> <!-- example post -->
                     <header class="flex">
-                        <div>
-                            <img>
+                        <div class="flex">
+                            <img class="pfp" alt="user profile picture" src="./assets/media/favicon.png">
                             <h4 class="username">User Name</h4>
                         </div>
                         <h4 class="date">date</h4>
