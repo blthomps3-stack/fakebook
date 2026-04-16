@@ -14,7 +14,7 @@
     margin-inline: auto;
 }
 
-main {
+body {
     background-color: var(--app-bg-color);
 }
 
@@ -42,7 +42,8 @@ main {
 
 nav ul {
     list-style: none;
-    gap: 10px;
+    gap: 20px;
+    font-size: 18px;
 }
 
 .pfp {
@@ -54,13 +55,20 @@ nav ul {
 /* infobox */
 #infobox {
     justify-self: end;
-    background-color: var(--app-secondary-color);
     width: 300px;
     top: 90px;
     right: 70px;
     line-height: 30px;
     padding: 10px;
     justify-content: space-between;
+    border-radius: 10px;
+    border: none;
+}
+#infobox:focus{
+    outline: 0;
+}
+::backdrop{
+    opacity: 0;
 }
 
 #moneyicon {
@@ -92,6 +100,7 @@ textarea {
     font-weight: 700;
     resize: none;
     width: 570px;
+    flex-grow: 3;
     color: var(--app-light-grey-text);
     background-color: var(--app-secondary-color);
 }
@@ -141,9 +150,13 @@ textarea {
         }
     }
     .caption {
-        padding: 10px 0px;
+        padding-left: 10px;
+        margin-top: 10px;
+        font-size: 18px;
     }
-    :last-child {
+    .postimage {
+        margin-top:10px;
         border-radius: 10px;
     }
+    margin-bottom: 30px;
 }
