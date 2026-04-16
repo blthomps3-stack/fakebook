@@ -1,4 +1,4 @@
-**Link**: https://blthomps3-stack.github.io/fakebook//br
+**Link**: https://blthomps3-stack.github.io/fakebook/
 
 **Author**: Blake Thompson
 
