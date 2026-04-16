@@ -39,22 +39,23 @@
         <main class="center">
             <div class="postbox">
                 <form id="postform" class="flex">
-                    <textarea placeholder="What's new?" name="posttext" id="textbox"></textarea>
+                    <textarea placeholder="What's new" name="posttext" id="textbox"></textarea>
                     <div class="flex postbuttons">
                         <div>
                             <label for="upload"><i class="fa-solid fa-image"></i></label>
-                            <input type="file" accept="image" id="upload" name="postimage">
+                            <input type="file" accept="image" id="upload">
                         </div>
                         <div id="submit">Post</div>
                     </div>
                 </form>
             </div>
             <section id="timeline">
-                <div class="flex post" id="basePost"> <!-- example post -->
+                <!-- template post -->
+                <div class="flex post" id="basePost">
                     <header class="flex">
                         <div class="flex">
                             <img class="pfp" alt="user profile picture" src="./assets/media/favicon.png">
-                            <h4 class="username">User Name</h4>
+                            <h4 class="username">John Smith</h4>
                         </div>
                         <h4 class="date">date</h4>
                     </header>

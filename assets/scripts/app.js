@@ -13,7 +13,10 @@ const upload = document.getElementById('upload');
 const textbox = document.getElementById('textbox');
 const submit = document.getElementById('submit');
 const postTemplate = document.getElementById('basePost');
+const date = document.querySelector('.date');
 const timeline = document.getElementById('timeline');
+
+date.innerText = (new Date).toLocaleString('en-ca', {year: 'numeric', month: 'short', day: '2-digit'});
 
 class User {
     #id;
@@ -74,8 +77,8 @@ function writeModal(info){
     username.innerText = `${info[1]}#${info[2]}`;
     email.innerText = info[3];
     if(info.length > 4){ /* In this program there's only a subscriber but this if statement makes it compatible with users too */
-        pages.innerText = `Pages: ${info[4]}`;
-        groups.innerText = `Groups: ${info[5]}`;
+        pages.innerText = `Pages: ${info[4].join(', ')}`;
+        groups.innerText = `Groups: ${info[5].join(', ')}`;
         moneyicon.style.color = info[6] ? 'green' : 'red';
     } else {
         pages.innerText = '';
@@ -102,12 +105,11 @@ function createPost(){
     if(upload.files[0] !== undefined) {
         let image = URL.createObjectURL(upload.files[0]);
         let postImage = document.createElement('img');
-        console.log(postImage);
         postImage.setAttribute("src", image);
+        postImage.className = "postimage";
         post.appendChild(postImage);
         valid = true;
     }
-    console.log(post);
     if(valid) {
         post.setAttribute('id', '');
         timeline.prepend(post);
@@ -121,3 +123,5 @@ function createPost(){
 submit.addEventListener('click', function(){
     createPost();
 });
+
+textbox.setAttribute("placeholder", `What's new, ${subscriber.name}?`)
